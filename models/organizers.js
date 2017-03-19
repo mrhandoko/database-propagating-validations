@@ -22,14 +22,14 @@ let date_validation = [
 let organizerSchema = new Schema({
   title: {
     type: String,
-    required: [true, 'Title is required. Please fill this form'],
-    unique: [true, 'Title is already in used']
+    required: [true, 'Event title is required. Please fill this form'],
+    unique: [true, 'Event Title is already in used']
   },
   username: {
     type: String,
     required: [true, 'Username is required. Please fill this form']
   },
-  data: {
+  date: {
     type: Date,
     required: [true, 'Date is required. Please fill this form']
     validate: date_validation
