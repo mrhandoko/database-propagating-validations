@@ -18,7 +18,6 @@ let date_validation = [
   })
 ]
 
-
 let organizerSchema = new Schema({
   title: {
     type: String,
@@ -31,7 +30,7 @@ let organizerSchema = new Schema({
   },
   date: {
     type: Date,
-    required: [true, 'Date is required. Please fill this form']
+    required: [true, 'Date is required. Please fill this form'],
     validate: date_validation
   }
 })

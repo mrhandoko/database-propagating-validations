@@ -5,8 +5,7 @@ var mongoose = require('mongoose')
 mongoose.connect('mongodb://localhost/propagation')
 mongoose.Promise = global.promise
 
-var index = require('./routes/index')
-var users = require('./routes/users')
+var index = require('./routes/api/index')
 
 var app = express()
 
@@ -14,6 +13,6 @@ app.use(logger('dev'))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 
-app.use('/', index)
+app.use('/api', index)
 
 module.exports = app
